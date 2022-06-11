@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #555;
+    font-family:cursive;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+}
+
+.header{
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    color: #fff;
+    background: url(fondo.png), #7b4397;
+    background: url(fondo.png), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
+    background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430)
+
+}
+
+.budget{
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.budget-title{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.cleanStyles::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.right{
+    float:right;
+}
+
+.budget-value{
+    font-weight: 300;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.budget-income,
+.budget-egress{
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.budget-income{
+    margin-bottom: 10px;
+    background-color: #28B9B5;
+}
+
+.budget-egress{
+    background-color: #FF5049;
+}
+
+.budget-income-text,
+.budget-egress-text{
+    float: left;
+    font-size: 13px;
+    color: #fff;
+    margin-top: 2px;
+}
+
+.budget-income__value,
+.budget-egress__value{
+    letter-spacing: 1px;
+    float: left;
+}
+
+.budget-income__percent,
+.budget-egress__percent{
+    float: left;
+    width: 34px;
+    font-size: 11px;
+    padding: 3px 0;
+    margin-left: 10px;
+}
+
+.budget-egress__percent{
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 3px;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.rojo { color: #FF5049 !important; }
+.rojofocus:focus { border: 1px solid #FF5049 !important; }
+
+
+.add {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+}
+
+.add-box {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add-type {
+    width: 55px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 18px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add-description,
+.add-value {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.add-description { width: 400px;}
+.add-value { width: 100px;}
+
+.add-btn {
+    height: 40px;
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #28B9B5;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.add-btn:active{ 
+    transform: translateY(2px); 
+}
+
+.add-type:focus,
+.add-description:focus,
+.add-value:focus{
+    outline: none;
+    border: 1px solid #28B9B5;
+}
+
+.add-btn:focus{
+    outline: none; 
+}
+
+.box{
+    width: 860px;
+    margin: 60px auto;
+}
+.income{
+    float: left;
+    width: 370px;
+    margin-right: 70px;
+}
+.egress{
+    float: left;
+    width: 370px;
+}
+.income-title{
+    color: #28B9B5;
+}
+.egress-title{
+    color:#FF5049;
+}
+.element{
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+    height: 50px;
+}
+.element:first-child{
+    border-top: 1px solid #e7e7e7;
+}
+.element:nth-child(even){
+    background-color: #f7f7f7;
+}
+.element-description{
+    float: left;
+}
+.element-value{
+    float: left;
+    transition: transform 0.3s;
+}
+
+.income .element-value,
+.income .element-delete__btn{
+    color: #28B9B5;
+}
+.egress .element-value,
+.egress .element-percent,
+.egress .element-delete__btn {
+    color: #FF5049;
+}
+
+.element-delete{
+    float: left;
+}
+.element-delete__btn{
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+    
+}
+
+.element-delete__btn:focus{
+    outline:none;
+}
+.element-delete__btn:active{
+    transform: translateY(2px);
+}
+.element:hover .element-delete__btn{
+    display: block;
+}
+.element:hover .element-value {
+    transform: translateX(-20px); 
+}
+.element:hover .element-percent {
+    transform: translateX(-20px); 
+}
+
+.element-percent{
+        float: left;
+        margin-left: 20px;
+        transition: transform 0.3s;
+        font-size: 11px;
+        background-color: #FFDAD9;
+        padding: 3px;
+        border-radius: 3px;
+        width: 45px;
+        text-align: center;
+    
+}
