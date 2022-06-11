@@ -7,6 +7,7 @@ let expenditure = [
     new Egress ('Lowi',50)
 ];
 
+
 let appLoad = () =>{
     headerLoad();
     incomeLoad();
